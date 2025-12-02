@@ -2,37 +2,88 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is Stretch Forming?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Process of forming various metals into special shapes with special equipment & die",
+        "b": "Process of pulling work piece through conical dies",
+        "c": "Process to reducing the cross-section work piece",
+        "d": "All of the above"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Stretch forming involves stretching and bending sheet metal over a die to create contoured shapes.",
+        "b": "This describes a different metal forming process known as drawing.",
+        "c": "This is related to processes like rolling or extrusion, not stretch forming.",
+        "d": "Incorrect, as only option (a) correctly defines stretch forming."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which material is most commonly used in stretch forming?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Aluminium",
+        "b": "Brass",
+        "c": "Plastic",
+        "d": "Wood"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Aluminium is the preferred material due to its ductility and lightweight properties.",
+        "b": "Brass is less commonly used in stretch forming.",
+        "c": "Plastic is not typically stretch formed in the same manner.",
+        "d": "Wood is not used in stretch forming processes."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Stretch forming is widely used for:",
+      "answers": {
+        "a": "Fuselage skin panels",
+        "b": "Injection molding",
+        "c": "Casting metal parts",
+        "d": "Thermoforming plastic sheets"
+      },
+      "explanations": {
+        "a": "Stretch forming is extensively used in aerospace to shape fuselage panels.",
+        "b": "Injection molding is a different manufacturing process.",
+        "c": "Casting involves pouring molten metal into molds, not stretching.",
+        "d": "Thermoforming is used for plastics, not metal stretch forming."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following metals can be stretch formed?",
+      "answers": {
+        "a": "Aluminium",
+        "b": "Stainless steel",
+        "c": "Nickel-based steels",
+        "d": "Titanium"
+      },
+      "explanations": {
+        "a": "Aluminium is commonly used due to its excellent formability.",
+        "b": "Stainless steel can be stretch formed, though less commonly than aluminium.",
+        "c": "Nickel-based steels are less common for stretch forming due to their hardness.",
+        "d": "Titanium is also used, especially in aerospace applications."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Bending is better because ________:",
+      "answers": {
+        "a": "Minimum bend radius is generally 2-3 times greater than other forming methods",
+        "b": "Minimum bend radius is generally 4-6 times greater than other forming methods",
+        "c": "Minimum bend radius is generally 1-6 times greater than other forming methods",
+        "d": "Minimum bend radius is generally 6-8 times greater than other forming methods"
+      },
+      "explanations": {
+        "a": "In stretch forming, the minimum bend radius is usually 2-3 times the material thickness.",
+        "b": "This is not typical for stretch forming.",
+        "c": "This range is too broad and not specific to stretch forming.",
+        "d": "This range is exaggerated and not accurate for stretch forming."
+      },
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]
