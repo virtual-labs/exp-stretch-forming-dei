@@ -2,37 +2,88 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the maximum bend radius?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Unlimited",
+        "b": "Depends upon the dies",
+        "c": "30 cm",
+        "d": "60 cm"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Stretch forming allows very large bend radii because the sheet is stretched, not just bent.",
+        "b": "Die shape influences radius, but not the absolute maximum.",
+        "c": "30 cm is not a defined limit for stretch forming.",
+        "d": "60 cm is also not a defined limit."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Surface distortion in stretch forming is:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Minimum",
+        "b": "Maximum",
+        "c": "Unlimited",
+        "d": "None of these"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Stretch forming produces smooth surfaces because the material is uniformly stretched.",
+        "b": "Incorrect; it does not create high distortion.",
+        "c": "Not applicable to stretch forming.",
+        "d": "Option (a) is already correct."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Arms of the stretch forming press can move only:",
+      "answers": {
+        "a": "180°",
+        "b": "90°",
+        "c": "270°",
+        "d": "360°"
+      },
+      "explanations": {
+        "a": "Arms typically swing up to 180° for wrapping around the die.",
+        "b": "Too limited for forming operations.",
+        "c": "270° is mechanically unnecessary.",
+        "d": "360° rotation is not possible in stretch presses."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Non-symmetric profiles can be formed:",
+      "answers": {
+        "a": "Readily without twist",
+        "b": "Readily with twist",
+        "c": "Do not form",
+        "d": "None of these"
+      },
+      "explanations": {
+        "a": "They can be formed but usually they twist during forming, making this incorrect.",
+        "b": "Correct; non-symmetric profiles tend to twist under tension during stretch forming.",
+        "c": "They can be formed, so this is incorrect.",
+        "d": "Option (b) is the correct one."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Stretch forming is performed:",
+      "answers": {
+        "a": "On a stretch press",
+        "b": "Reducer roll press",
+        "c": "Hydraulic press",
+        "d": "Mechanical press"
+      },
+      "explanations": {
+        "a": "A stretch press is the dedicated machine for stretch forming operations.",
+        "b": "Used for different shaping operations, not stretch forming.",
+        "c": "Hydraulic presses are used for other metal forming techniques.",
+        "d": "Mechanical presses are not used for stretch forming."
+      },
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]
