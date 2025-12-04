@@ -5,7 +5,6 @@ Stretch forming is a metal forming process in which sheet metal is **stretched a
 
 The most common stretch presses are:
 - **Vertical stretch presses** – the form die is raised into the sheet using a hydraulic ram.
-  
 - **Horizontal stretch presses** – the form die is fixed, and jaws pull the sheet horizontally around it.
 
 As the sheet stretches, **tensile forces increase** and the metal undergoes **plastic deformation**, taking the shape of the die.
@@ -13,7 +12,10 @@ As the sheet stretches, **tensile forces increase** and the metal undergoes **pl
 ---
 
 ## Figure
-**Figure: Stretch Forming**
+
+<p align="center">
+  <img src="images/Stretchfoarming/Strectchforming.png" alt="Stretch Forming Figure">
+</p>
 
 ---
 
@@ -88,6 +90,3 @@ They use:
 - Two swinging arms  
 - Multiple gripping jaws  
 - Hydraulic tension cylinders to stretch and wrap the workpiece around the die  
-
----
-
