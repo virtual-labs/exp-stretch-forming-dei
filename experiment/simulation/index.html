@@ -1,13 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stretch Forming Simulation Options</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 230px;
+      background: #222;
+      height: 100vh;
+      padding: 20px;
+      color: #fff;
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .menu-btn {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: pointer;
+      background: #444;
+      color: white;
+      transition: 0.2s;
+    }
+
+    .menu-btn:hover {
+      background: #666;
+    }
+
+    .content {
+      flex-grow: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+    }
+
+    video {
+      width: 70%;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    h1 { margin-bottom: 10px; }
+  </style>
 </head>
 <body>
-		<!-- Your code goes here-->
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+  <div class="sidebar">
+    <h2>Simulations</h2>
+    <button class="menu-btn" onclick="loadSim('STRETCH FORMING')">STRETCH FORMING</button>
+    <button class="menu-btn" onclick="loadSim('STRETCH FORMING WITH GRAPH')">STRETCH FORMING WITH GRAPH</button>
+    <button class="menu-btn" onclick="loadSim('STRETCH FORMING-2')">STRETCH FORMING-2</button>
+    <button class="menu-btn" onclick="loadSim('STRETCH FORMING-2 WITH GRAPH')">STRETCH FORMING-2 WITH GRAPH</button>
+  </div>
+
+  <div class="content">
+    <h1 id="sim-title">Select a Simulation</h1>
+    <video id="sim-video" controls src=""></video>
+  </div>
+
+  <script>
+    function loadSim(name) {
+      document.getElementById('sim-title').innerText = name;
+      let videoPath = '';
+
+      switch(name) {
+        case 'STRETCH FORMING':
+          videoPath = 'video/FormingStretch.mp4';
+          break;
+        case 'STRETCH FORMING WITH GRAPH':
+          videoPath = 'video/FormingGraph.mp4';
+          break;
+        case 'STRETCH FORMING-2':
+          videoPath = 'video/FormingStrain.mp4';
+          break;
+        case 'STRETCH FORMING-2 WITH GRAPH':
+          videoPath = 'video/StretchGraph.mp4';
+          break;
+      }
+
+      const video = document.getElementById('sim-video');
+      video.src = videoPath;
+      video.load();
+      video.play();
+    }
+  </script>
+
 </body>
 </html>
