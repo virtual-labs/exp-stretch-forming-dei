@@ -10,12 +10,7 @@ The most common stretch presses are:
 As the sheet stretches, **tensile forces increase** and the metal undergoes **plastic deformation**, taking the shape of the die.
 
 ---
-
-## Figure
-
-<p align="center">
-  <img src="images/Stretchfoarming/Strectchforming.png" alt="Stretch Forming Figure">
-</p>
+<br/><center><img src="images/Stretchfoarming/Stretchforming.png" alt="Stretch Forming" height="430" width="475"><br/>Figure: Stretch Forming</center>
 
 ---
 
