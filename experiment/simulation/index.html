@@ -3,82 +3,198 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stretch Forming Simulation Options</title>
+  <title>Stretch Forming Simulations</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      display: flex;
+    :root {
+      --sidebar-width: 280px;
+      --bg-main: #f9f9f9;      /* Off-white background */
+      --bg-sidebar: #ececec;   /* Light grey sidebar */
+      --text-dark: #333333;    /* Main text */
+      --accent: #666666;       /* Subtle accents */
+      --border: #d1d1d1;       /* Light grey borders */
     }
 
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-dark);
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    /* --- Hamburger Menu Icon --- */
+    .menu-toggle {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 1000;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--text-dark);
+    }
+
+    /* --- Sidebar Navigation --- */
     .sidebar {
-      width: 230px;
-      background: #222;
-      height: 100vh;
-      padding: 20px;
-      color: #fff;
+      position: fixed;
+      left: calc(-1 * var(--sidebar-width)); /* Hidden on mobile */
+      top: 0;
+      width: var(--sidebar-width);
+      height: 100%;
+      background: var(--bg-sidebar);
+      border-right: 1px solid var(--border);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 999;
+      padding-top: 70px;
+      box-sizing: border-box;
+    }
+
+    .sidebar.active {
+      transform: translateX(var(--sidebar-width));
     }
 
     .sidebar h2 {
-      margin-top: 0;
       text-align: center;
+      font-size: 1rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 25px;
     }
 
     .menu-btn {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 8px;
-      font-size: 15px;
+      width: 85%;
+      display: block;
+      margin: 10px auto;
+      padding: 15px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--text-dark);
+      text-align: left;
+      border-radius: 6px;
       cursor: pointer;
-      background: #444;
-      color: white;
-      transition: 0.2s;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s ease;
     }
 
     .menu-btn:hover {
-      background: #666;
+      background: var(--text-dark);
+      color: #ffffff;
+      border-color: var(--text-dark);
     }
 
+    /* --- Main View --- */
     .content {
-      flex-grow: 1;
-      padding: 40px;
+      padding: 20px;
+      margin-top: 60px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
+      transition: margin-left 0.3s ease;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--accent);
+      margin-bottom: 25px;
       text-align: center;
     }
 
-    video {
-      width: 70%;
-      margin-top: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    .video-container {
+      width: 100%;
+      max-width: 950px;
+      background: #fff;
+      padding: 8px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      box-sizing: border-box;
     }
 
-    h1 { margin-bottom: 10px; }
+    video {
+      width: 100%;
+      display: block;
+      border-radius: 8px;
+      background: #000;
+    }
+
+    /* Dim background when menu is open */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.3);
+      z-index: 998;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    /* --- Desktop Logic --- */
+    @media (min-width: 1024px) {
+      .sidebar {
+        left: 0;
+        transform: none;
+      }
+      .content {
+        margin-left: var(--sidebar-width);
+      }
+      .menu-toggle, .overlay {
+        display: none;
+      }
+      h1 { font-size: 1.8rem; }
+    }
   </style>
 </head>
 <body>
 
-  <div class="sidebar">
-    <h2>Simulations</h2>
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+  <button class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="sidebar" id="sidebar">
+    <h2>Select Simulation</h2>
     <button class="menu-btn" onclick="loadSim('STRETCH FORMING')">STRETCH FORMING</button>
-    <button class="menu-btn" onclick="loadSim('STRETCH FORMING WITH GRAPH')">STRETCH FORMING WITH GRAPH</button>
+    <button class="menu-btn" onclick="loadSim('STRETCH FORMING WITH GRAPH')">STRETCH FORMING + GRAPH</button>
     <button class="menu-btn" onclick="loadSim('STRETCH FORMING-2')">STRETCH FORMING-2</button>
-    <button class="menu-btn" onclick="loadSim('STRETCH FORMING-2 WITH GRAPH')">STRETCH FORMING-2 WITH GRAPH</button>
+    <button class="menu-btn" onclick="loadSim('STRETCH FORMING-2 WITH GRAPH')">STRETCH FORMING-2 + GRAPH</button>
   </div>
 
   <div class="content">
-    <h1 id="sim-title">Select a Simulation</h1>
-    <video id="sim-video" controls src=""></video>
+    <h1 id="sim-title">Select a Simulation to Begin</h1>
+    <div class="video-container">
+      <video id="sim-video" controls src=""></video>
+    </div>
   </div>
 
   <script>
+    function toggleMenu() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      sidebar.classList.toggle('active');
+      overlay.classList.toggle('active');
+    }
+
     function loadSim(name) {
       document.getElementById('sim-title').innerText = name;
       let videoPath = '';
@@ -102,6 +218,11 @@
       video.src = videoPath;
       video.load();
       video.play();
+
+      // Auto-close menu on small screens after choosing a video
+      if (window.innerWidth < 1024) {
+        toggleMenu();
+      }
     }
   </script>
 
