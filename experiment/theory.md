@@ -1,4 +1,3 @@
-# Stretch Forming
 
 ## Introduction
 Stretch forming is a metal forming process in which sheet metal is **stretched and bent simultaneously** over a die to produce large contoured parts. The sheet is gripped along its edges by **gripping jaws**, which are pulled by pneumatic or hydraulic force on a stretch press. The sheet is then wrapped over a **stretch form block (form die)** to achieve the desired contour.
