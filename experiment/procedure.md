@@ -1,4 +1,3 @@
-# Procedure
 
 ## 1. Material Preparation
 - Select a ductile sheet metal specimen of specified thickness (e.g., aluminium, steel, or titanium).  
