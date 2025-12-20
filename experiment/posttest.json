@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "What is the maximum bend radius?",
+      "question": "Q6.What is the maximum bend radius?",
       "answers": {
         "a": "Unlimited",
         "b": "Depends upon the dies",
@@ -19,7 +19,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Surface distortion in stretch forming is:",
+      "question": "Q7.Surface distortion in stretch forming is:",
       "answers": {
         "a": "Minimum",
         "b": "Maximum",
@@ -36,7 +36,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Arms of the stretch forming press can move only:",
+      "question": "Q8.Arms of the stretch forming press can move only:",
       "answers": {
         "a": "180°",
         "b": "90°",
@@ -53,7 +53,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Non-symmetric profiles can be formed:",
+      "question": "Q9.Non-symmetric profiles can be formed:",
       "answers": {
         "a": "Readily without twist",
         "b": "Readily with twist",
@@ -70,7 +70,7 @@
       "difficulty": "intermediate"
     },
     {
-      "question": "Stretch forming is performed:",
+      "question": "Q10.Stretch forming is performed:",
       "answers": {
         "a": "On a stretch press",
         "b": "Reducer roll press",
